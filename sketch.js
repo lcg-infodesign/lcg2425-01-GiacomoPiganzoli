@@ -1,19 +1,24 @@
 function setup(){
-  createCanvas(windowWidth, windowWidth/14*19);
+  createCanvas(windowWidth, windowHeight);
   noLoop()
+  rectMode(CENTER);
+  textFont("Helvetica");
 }
 
 //Funzione del cerchio (x-xc)^2+(y-yc)^2=r2  y=sqrt((x-xc)^2+r^2)+yc
 
 
 function draw() {
-  background("#EFF0F2")
-  let diametro = windowWidth/14;
-  let xC = diametro*3;
-  let yC = diametro*3.5;
+  background("#1B080A");
+  let diametro = windowHeight/18;
+  let xC = windowWidth/2-4*diametro;
+  let yC = diametro*3;
+  fill("#EFF0F2")
+  strokeWeight(0);
+  rect(windowWidth/2, windowHeight/2, diametro*13,windowHeight);
   fill("#F06757")
   strokeWeight(0);
-  rect(windowWidth/7, diametro*2.5, diametro*10,diametro*14);
+  rect(windowWidth/2, windowHeight/2, diametro*10,diametro*14);
   let n=3;
   for(let r=0; r<13; r++){
       for(let c=0; c<9; c++){
@@ -57,11 +62,15 @@ function draw() {
       xC += diametro;
       n += 1;
   }
-  xC = diametro*3;
+  xC = windowWidth/2-4*diametro;
   yC += diametro;
 }
 strokeWeight(0)
-fill("#1B080A")
-textSize(diametro/5);
-text("Giacomo Piganzoli", 20, windowWidth/14*19-20)
+fill("#EFF0F2")
+textSize(diametro/2.6);
+textStyle(BOLD);
+text("Untitled - Werkstatt edition kroll", diametro/3, 2*diametro+diametro/2)
+textSize(diametro/2.8);
+textStyle(ITALIC);
+text("Georg Ness, Germany 1970", diametro/3, 2*diametro+diametro*1.2)
 }
