@@ -1,7 +1,6 @@
 function setup(){
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(windowWidth, windowWidth/20*10);
   noLoop()
-  rectMode(CENTER);
   textFont("Helvetica");
 }
 
@@ -10,12 +9,12 @@ function setup(){
 
 function draw() {
   background("#EFF0F2");
-  let diametro = windowHeight/10;
+  let diametro = windowWidth/20;
   let xC = windowWidth/2-8*diametro;
   let yC = diametro*2;
   fill("#F06757");
   strokeWeight(0);
-  rect(windowWidth/2, windowHeight/2, diametro*18, diametro*8);
+  rect(diametro, diametro, diametro*18, diametro*8);
   let n=3;
   for(let r=0; r<7; r++){
       for(let c=0; c<17; c++){
@@ -66,8 +65,8 @@ strokeWeight(0);
 fill("#1B080A");
 textSize(diametro/8);
 textStyle(BOLD);
-text("Untitled - Werkstatt edition Kroll ", windowWidth/2-9*diametro, windowHeight-diametro/6)
+text("Untitled - Werkstatt edition Kroll ", windowWidth/2-9*diametro, 9.7*diametro)
 textSize(diametro/8);
 textStyle(NORMAL);
-text(" Georg Nees, Germania 1970", windowWidth/2-9*diametro+2.1*diametro, windowHeight-diametro/6)
+text(" Georg Nees, Germania 1970", windowWidth/2-9*diametro+2*diametro, 9.7*diametro)
 }
