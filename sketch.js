@@ -62,9 +62,12 @@ function draw() {
   xC = windowWidth/2-8*diametro;
   yC += diametro;
 }
-strokeWeight(0)
-fill("#EFF0F2")
-textSize(diametro/2.6);
+strokeWeight(0);
+fill("#1B080A");
+textSize(diametro/8);
 textStyle(BOLD);
-text("Untitled - Werkstatt edition Kroll - Georg Ness, Germania 1970")
+text("Untitled - Werkstatt edition Kroll ", windowWidth/2-9*diametro, windowHeight-diametro/6)
+textSize(diametro/8);
+textStyle(NORMAL);
+text(" Georg Nees, Germania 1970", windowWidth/2-9*diametro+2.1*diametro, windowHeight-diametro/6)
 }
