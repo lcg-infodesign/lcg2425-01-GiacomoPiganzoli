@@ -9,19 +9,16 @@ function setup(){
 
 
 function draw() {
-  background("#1B080A");
-  let diametro = windowHeight/18;
-  let xC = windowWidth/2-4*diametro;
-  let yC = diametro*3;
-  fill("#EFF0F2")
+  background("#EFF0F2");
+  let diametro = windowHeight/10;
+  let xC = windowWidth/2-8*diametro;
+  let yC = diametro*2;
+  fill("#F06757");
   strokeWeight(0);
-  rect(windowWidth/2, windowHeight/2, diametro*13,windowHeight);
-  fill("#F06757")
-  strokeWeight(0);
-  rect(windowWidth/2, windowHeight/2, diametro*10,diametro*14);
+  rect(windowWidth/2, windowHeight/2, diametro*18, diametro*8);
   let n=3;
-  for(let r=0; r<13; r++){
-      for(let c=0; c<9; c++){
+  for(let r=0; r<7; r++){
+      for(let c=0; c<17; c++){
       //xi yi: Coordinate iniziali
       let xi = random(-diametro / 2, diametro / 2);
       let yi = sqrt((diametro / 2) * (diametro / 2) - xi * xi);
@@ -57,20 +54,17 @@ function draw() {
           line(x1,y1,x2,y2)
       }
       x1=x2;
-    y1=y2;
+      y1=y2;
       }
       xC += diametro;
       n += 1;
   }
-  xC = windowWidth/2-4*diametro;
+  xC = windowWidth/2-8*diametro;
   yC += diametro;
 }
 strokeWeight(0)
 fill("#EFF0F2")
 textSize(diametro/2.6);
 textStyle(BOLD);
-text("Untitled - Werkstatt edition kroll", diametro/3, 2*diametro+diametro/2)
-textSize(diametro/2.8);
-textStyle(ITALIC);
-text("Georg Ness, Germany 1970", diametro/3, 2*diametro+diametro*1.2)
+text("Untitled - Werkstatt edition Kroll - Georg Ness, Germania 1970")
 }
